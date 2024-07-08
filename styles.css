@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: cadetblue;
+}
+
+.container {
+    text-align: center;
+    width: 30rem;
+    height: 20rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    opacity: 0.2;
+    overflow: hidden;
+}
+
+input {
+    color:black;
+    padding: 10px;
+    width: 300px;
+}
+
+button {
+    padding: 10px;
+    opacity: 1;
+}
+
+ul li{
+    opacity:1;
+    list-style-type: none;
+    font-size:17px;
+    padding: 12px 8px 12px 50px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    user-select:none;
+    cursor:pointer;
+}
