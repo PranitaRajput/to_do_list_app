@@ -1,46 +1,105 @@
+/* General styles for the body */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-image: url(images/download.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(2px);
     margin: 0;
-    background-color: cadetblue;
+    padding: 0;
 }
 
+/* Container for the to-do list app */
 .container {
-    text-align: center;
-    width: 30rem;
-    height: 20rem;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
-    border-radius: 5px;
-    position: relative;
-    z-index: 1;
-    background: inherit;
-    opacity: 0.2;
-    overflow: hidden;
-}
-
-input {
-    color:black;
-    padding: 10px;
     width: 300px;
+    margin: 50px auto;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
 }
 
-button {
+
+/* Title of the to-do list app */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: lightgreen;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+/* Input for adding new to-dos */
+#taskInput {
+    width: calc(100% - 40px);
     padding: 10px;
-    opacity: 1;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width:90%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
 
-ul li{
-    opacity:1;
+/* Button for adding new to-dos */
+.todoButton {
+    display: block;
+    width: 60%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.todoButton:hover {
+    background: #45a049;
+}
+
+/* List of to-dos */
+#taskList {
     list-style-type: none;
-    font-size:17px;
-    padding: 12px 8px 12px 50px;
-    margin-top: 5px;
-    margin-right: 5px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
-    user-select:none;
-    cursor:pointer;
+    padding: 0;
+    margin: 0;
+    width:100%;
+}
+
+/* Individual to-do item */
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color:#ddd;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Text of the to-do item */
+#taskList li.checked {
+    cursor: pointer;
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Button for removing a to-do item */
+#taskList li span {
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 3px 7px;
+}
+
+#taskList li span.close:hover {
+    background: #c0392b;
 }
