@@ -103,3 +103,12 @@ body {
 #taskList li span.close:hover {
     background: #c0392b;
 }
+
+@media (max-width: 500px) {
+   body {
+    height:100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
